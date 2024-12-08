@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+  </head>
+  <body>
+    <!--Header-->
+      <div id="header-container">
+        <!--The header.html content will be included dynamically -->
+      </div>
+        
+    <!--Navigation Menu-->
+    <div id="menu-container">
+      <!-- The menu.html content will be included dynamically -->
+    </div>
+
+    <!-Main Content-->
+    <main>
+      <h1>About us</h1>
+      <p>Welcome to Aspire E-Commerce! We are a mission-driven company dedicated to providing
+      quality products and exceptional service to our customers. Our vision is to positively
+      impact ilves by offerring reliable, affordable, and innovative solutions talilore to meet
+      our customers' needs</p>
+      
+      <section>
+          <h2>Our Vision</h2>
+          <p>To be the leading e-commerce platform that integrates integrity, innovation, and excellence
+          into every product and service we offer
+          </p>
+      </section>
+
+      <section>
+        <h2>Our Mission</h2>
+        <p>To empower communities and individuals by delivering exceptional products and fostering a 
+        culture of trust and reliability</p>
+      </section>
+
+      <section>
+        <h2>Our values</h2>
+        <ul>
+          <li><strong>Integrity:</strong>Conducting business with transparency and ethical principles</li>
+          <li><strong>Innovation:</strong>Continually striving to improve and innovate for a better customer experience</li>
+          <li><strong>Excellence:</strong>Ensuring every product and service meets the highest standards of quality</li>
+          <li><strong>Faith:</strong>Guided by biblical principles in all our endeavors</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Our team</h2>
+        <p>Our team comprises dedicated professionals who are passionate about serving out customers and achieving our goals.
+        Learn more about them on our <a href="org_chart.html">Organizational Chart</a>page</p>
+      </section>
+    </main>
+
+    <!--Footer-->
+    <footer>
+      <p>&copy; 2024 Aspire E-Commerce. All Rights Reserved</p>
+    </footer>
+
+    <script>
+      function loadHTML(){
+        fetch('header.html')
+        .then(response=>response.text())
+        .then(data=>{
+          document.getElementById('header-container').innerHTML=data;});
+
+        fetch('menu.html')
+        .then(response=>response.text())
+        .then(data=>{
+          document.getElementById('menu-container').innerHTML=data;});
+      }
+
+      window.onload=loadHTML;
+    </script>
+  </body>
+</html>
